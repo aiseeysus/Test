@@ -1,0 +1,412 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   Streamify - Music &amp; Podcast Platform
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&amp;family=Roboto&amp;display=swap" rel="stylesheet"/>
+  <style>
+   body {
+      font-family: 'Roboto', sans-serif;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Montserrat', sans-serif;
+    }
+  </style>
+ </head>
+ <body class="bg-gray-900 text-gray-100 min-h-screen flex flex-col">
+  <!-- Header / Navigation -->
+  <header class="bg-gray-800 shadow-md sticky top-0 z-50">
+   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
+    <a class="flex items-center space-x-2" href="#">
+     <img alt="Streamify logo, stylized letter S in a music note shape, blue and white colors" class="w-10 h-10" height="40" src="https://storage.googleapis.com/a1aa/image/3451d311-2c89-443e-388b-ab6a5d8844e1.jpg" width="40"/>
+     <span class="text-2xl font-bold text-indigo-400">
+      Streamify
+     </span>
+    </a>
+    <nav class="hidden md:flex space-x-8 font-semibold text-gray-300">
+     <a class="hover:text-indigo-400 transition" href="#">
+      Home
+     </a>
+     <a class="hover:text-indigo-400 transition" href="#">
+      Browse
+     </a>
+     <a class="hover:text-indigo-400 transition" href="#">
+      Podcasts
+     </a>
+     <a class="hover:text-indigo-400 transition" href="#">
+      Playlists
+     </a>
+     <a class="hover:text-indigo-400 transition" href="#">
+      Artists
+     </a>
+     <a class="hover:text-indigo-400 transition" href="#">
+      About
+     </a>
+    </nav>
+    <div class="flex items-center space-x-4">
+     <button aria-label="Search" class="text-gray-300 hover:text-indigo-400 transition focus:outline-none">
+      <i class="fas fa-search fa-lg">
+      </i>
+     </button>
+     <button aria-label="User account" class="text-gray-300 hover:text-indigo-400 transition focus:outline-none">
+      <i class="fas fa-user-circle fa-lg">
+      </i>
+     </button>
+    </div>
+    <button aria-label="Open menu" class="md:hidden text-gray-300 hover:text-indigo-400 focus:outline-none" id="mobile-menu-button">
+     <i class="fas fa-bars fa-lg">
+     </i>
+    </button>
+   </div>
+   <!-- Mobile menu -->
+   <nav class="md:hidden bg-gray-700 text-gray-300 space-y-1 px-4 py-3 hidden" id="mobile-menu">
+    <a class="block px-2 py-1 rounded hover:bg-indigo-600" href="#">
+     Home
+    </a>
+    <a class="block px-2 py-1 rounded hover:bg-indigo-600" href="#">
+     Browse
+    </a>
+    <a class="block px-2 py-1 rounded hover:bg-indigo-600" href="#">
+     Podcasts
+    </a>
+    <a class="block px-2 py-1 rounded hover:bg-indigo-600" href="#">
+     Playlists
+    </a>
+    <a class="block px-2 py-1 rounded hover:bg-indigo-600" href="#">
+     Artists
+    </a>
+    <a class="block px-2 py-1 rounded hover:bg-indigo-600" href="#">
+     About
+    </a>
+   </nav>
+  </header>
+  <!-- Hero Section -->
+  <section class="relative bg-gradient-to-r from-indigo-900 via-indigo-800 to-indigo-700">
+   <div class="max-w-7xl mx-auto px-6 py-20 flex flex-col md:flex-row items-center md:items-start md:space-x-12">
+    <div class="md:w-1/2 text-center md:text-left">
+     <h1 class="text-4xl sm:text-5xl font-extrabold leading-tight mb-6">
+      Streamify: Your Ultimate Music &amp; Podcast Destination
+     </h1>
+     <p class="text-lg sm:text-xl text-indigo-200 mb-8">
+      Access millions of songs, albums, and audio shows worldwide. Create personalized playlists, discover new tracks, and enjoy high-quality audio anytime, anywhere.
+     </p>
+     <div class="flex flex-col sm:flex-row sm:space-x-6 space-y-4 sm:space-y-0 justify-center md:justify-start">
+      <a class="inline-flex items-center justify-center px-8 py-3 bg-indigo-500 hover:bg-indigo-600 rounded-md text-white font-semibold shadow-lg transition" href="#">
+       <i class="fas fa-play mr-3">
+       </i>
+       Start Listening
+      </a>
+      <a class="inline-flex items-center justify-center px-8 py-3 border border-indigo-400 text-indigo-300 hover:text-white hover:border-indigo-600 rounded-md font-semibold transition" href="#features">
+       Learn More
+      </a>
+     </div>
+    </div>
+    <div class="md:w-1/2 mt-12 md:mt-0 flex justify-center">
+     <img alt="Illustration of diverse people enjoying music and podcasts on various devices including smartphones, tablets, and laptops, with musical notes and podcast icons floating around" class="rounded-lg shadow-2xl max-w-full h-auto" height="400" loading="lazy" src="https://storage.googleapis.com/a1aa/image/433bc308-c80f-4617-7c4e-50e913e77a3b.jpg" width="500"/>
+    </div>
+   </div>
+  </section>
+  <!-- Features Section -->
+  <section class="max-w-7xl mx-auto px-6 py-16" id="features">
+   <h2 class="text-3xl font-extrabold text-center text-indigo-400 mb-12">
+    Features That Make Streamify Stand Out
+   </h2>
+   <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+    <div class="bg-gray-800 rounded-lg p-6 flex flex-col items-center text-center shadow-lg hover:shadow-indigo-500 transition">
+     <i class="fas fa-music fa-3x text-indigo-400 mb-4">
+     </i>
+     <h3 class="text-xl font-semibold mb-2">
+      Vast Global Library
+     </h3>
+     <p class="text-gray-300">
+      Explore millions of songs, albums, and podcasts from every genre and region worldwide.
+     </p>
+    </div>
+    <div class="bg-gray-800 rounded-lg p-6 flex flex-col items-center text-center shadow-lg hover:shadow-indigo-500 transition">
+     <i class="fas fa-list-ul fa-3x text-indigo-400 mb-4">
+     </i>
+     <h3 class="text-xl font-semibold mb-2">
+      Personalized Playlists
+     </h3>
+     <p class="text-gray-300">
+      Create and customize playlists tailored to your mood and taste with ease.
+     </p>
+    </div>
+    <div class="bg-gray-800 rounded-lg p-6 flex flex-col items-center text-center shadow-lg hover:shadow-indigo-500 transition">
+     <i class="fas fa-brain fa-3x text-indigo-400 mb-4">
+     </i>
+     <h3 class="text-xl font-semibold mb-2">
+      Smart Recommendations
+     </h3>
+     <p class="text-gray-300">
+      Discover new music and podcasts with AI-powered suggestions based on your listening habits.
+     </p>
+    </div>
+    <div class="bg-gray-800 rounded-lg p-6 flex flex-col items-center text-center shadow-lg hover:shadow-indigo-500 transition">
+     <i class="fas fa-headphones-alt fa-3x text-indigo-400 mb-4">
+     </i>
+     <h3 class="text-xl font-semibold mb-2">
+      High-Quality Audio
+     </h3>
+     <p class="text-gray-300">
+      Enjoy crystal-clear sound with support for high-fidelity audio playback.
+     </p>
+    </div>
+    <div class="bg-gray-800 rounded-lg p-6 flex flex-col items-center text-center shadow-lg hover:shadow-indigo-500 transition">
+     <i class="fas fa-cloud-download-alt fa-3x text-indigo-400 mb-4">
+     </i>
+     <h3 class="text-xl font-semibold mb-2">
+      Offline Listening
+     </h3>
+     <p class="text-gray-300">
+      Download your favorite tracks and podcasts to listen without an internet connection.
+     </p>
+    </div>
+    <div class="bg-gray-800 rounded-lg p-6 flex flex-col items-center text-center shadow-lg hover:shadow-indigo-500 transition">
+     <i class="fas fa-users fa-3x text-indigo-400 mb-4">
+     </i>
+     <h3 class="text-xl font-semibold mb-2">
+      Collaborative Playlists
+     </h3>
+     <p class="text-gray-300">
+      Share and collaborate on playlists with friends for the ultimate group listening experience.
+     </p>
+    </div>
+    <div class="bg-gray-800 rounded-lg p-6 flex flex-col items-center text-center shadow-lg hover:shadow-indigo-500 transition">
+     <i class="fas fa-heart fa-3x text-indigo-400 mb-4">
+     </i>
+     <h3 class="text-xl font-semibold mb-2">
+      Follow Artists
+     </h3>
+     <p class="text-gray-300">
+      Stay updated with your favorite artists’ latest releases and exclusive content.
+     </p>
+    </div>
+    <div class="bg-gray-800 rounded-lg p-6 flex flex-col items-center text-center shadow-lg hover:shadow-indigo-500 transition">
+     <i class="fas fa-sync-alt fa-3x text-indigo-400 mb-4">
+     </i>
+     <h3 class="text-xl font-semibold mb-2">
+      Cross-Device Syncing
+     </h3>
+     <p class="text-gray-300">
+      Seamlessly switch between devices without losing your place or playlists.
+     </p>
+    </div>
+    <div class="bg-gray-800 rounded-lg p-6 flex flex-col items-center text-center shadow-lg hover:shadow-indigo-500 transition">
+     <i class="fas fa-smile-beam fa-3x text-indigo-400 mb-4">
+     </i>
+     <h3 class="text-xl font-semibold mb-2">
+      Mood &amp; Activity Playlists
+     </h3>
+     <p class="text-gray-300">
+      Enjoy expertly curated playlists for every mood, workout, or occasion.
+     </p>
+    </div>
+   </div>
+  </section>
+  <!-- Popular Playlists Section -->
+  <section class="bg-gray-800 py-16">
+   <div class="max-w-7xl mx-auto px-6">
+    <h2 class="text-3xl font-extrabold text-indigo-400 mb-10 text-center">
+     Popular Playlists
+    </h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
+     <div class="bg-gray-700 rounded-lg overflow-hidden shadow-lg hover:shadow-indigo-500 transition cursor-pointer">
+      <img alt="Playlist cover image showing a relaxing sunset beach scene with palm trees and soft pastel colors for Chill Vibes playlist" class="w-full h-48 object-cover" height="300" loading="lazy" src="https://storage.googleapis.com/a1aa/image/106d7716-e8c7-42f8-5101-97b1a06acd1e.jpg" width="300"/>
+      <div class="p-4">
+       <h3 class="text-lg font-semibold text-indigo-300 mb-1">
+        Chill Vibes
+       </h3>
+       <p class="text-gray-400 text-sm">
+        Relaxing tunes to unwind and de-stress.
+       </p>
+      </div>
+     </div>
+     <div class="bg-gray-700 rounded-lg overflow-hidden shadow-lg hover:shadow-indigo-500 transition cursor-pointer">
+      <img alt="Playlist cover image showing a dynamic silhouette of a person running with vibrant red and orange colors for Workout Energy playlist" class="w-full h-48 object-cover" height="300" loading="lazy" src="https://storage.googleapis.com/a1aa/image/71440771-8e5d-4611-a4d8-be11ec2dfdc4.jpg" width="300"/>
+      <div class="p-4">
+       <h3 class="text-lg font-semibold text-indigo-300 mb-1">
+        Workout Energy
+       </h3>
+       <p class="text-gray-400 text-sm">
+        High-energy tracks to power your workouts.
+       </p>
+      </div>
+     </div>
+     <div class="bg-gray-700 rounded-lg overflow-hidden shadow-lg hover:shadow-indigo-500 transition cursor-pointer">
+      <img alt="Playlist cover image showing a calm workspace with a laptop, coffee cup, and soft blue lighting for Focus Flow playlist" class="w-full h-48 object-cover" height="300" loading="lazy" src="https://storage.googleapis.com/a1aa/image/0ed0a916-ae02-4e69-b236-9e85f0e591dd.jpg" width="300"/>
+      <div class="p-4">
+       <h3 class="text-lg font-semibold text-indigo-300 mb-1">
+        Focus Flow
+       </h3>
+       <p class="text-gray-400 text-sm">
+        Ambient and instrumental music for concentration.
+       </p>
+      </div>
+     </div>
+     <div class="bg-gray-700 rounded-lg overflow-hidden shadow-lg hover:shadow-indigo-500 transition cursor-pointer">
+      <img alt="Playlist cover image showing a vibrant party scene with colorful lights and dancing crowd for Party Hits playlist" class="w-full h-48 object-cover" height="300" loading="lazy" src="https://storage.googleapis.com/a1aa/image/ff4b3ddf-7282-4010-3c9b-c92119e7542e.jpg" width="300"/>
+      <div class="p-4">
+       <h3 class="text-lg font-semibold text-indigo-300 mb-1">
+        Party Hits
+       </h3>
+       <p class="text-gray-400 text-sm">
+        Upbeat tracks to get the party started.
+       </p>
+      </div>
+     </div>
+     <div class="bg-gray-700 rounded-lg overflow-hidden shadow-lg hover:shadow-indigo-500 transition cursor-pointer">
+      <img alt="Playlist cover image showing a cozy morning scene with acoustic guitar and warm sunlight for Acoustic Mornings playlist" class="w-full h-48 object-cover" height="300" loading="lazy" src="https://storage.googleapis.com/a1aa/image/db6c2331-d2df-4c13-6051-6cb493567372.jpg" width="300"/>
+      <div class="p-4">
+       <h3 class="text-lg font-semibold text-indigo-300 mb-1">
+        Acoustic Mornings
+       </h3>
+       <p class="text-gray-400 text-sm">
+        Gentle acoustic songs to start your day right.
+       </p>
+      </div>
+     </div>
+    </div>
+   </div>
+  </section>
+  <!-- Podcast Highlights Section -->
+  <section class="max-w-7xl mx-auto px-6 py-16">
+   <h2 class="text-3xl font-extrabold text-indigo-400 mb-10 text-center">
+    Podcast Highlights
+   </h2>
+   <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
+    <article class="bg-gray-800 rounded-lg shadow-lg overflow-hidden hover:shadow-indigo-500 transition cursor-pointer flex flex-col">
+     <img alt="Podcast cover image showing a microphone with digital tech icons and blue neon lights for Tech Talk podcast" class="w-full h-48 object-cover" height="250" loading="lazy" src="https://storage.googleapis.com/a1aa/image/160ffa4c-2091-4e57-19d0-b06c7f5e0c4c.jpg" width="400"/>
+     <div class="p-5 flex flex-col flex-grow">
+      <h3 class="text-xl font-semibold text-indigo-300 mb-2">
+       Tech Talk
+      </h3>
+      <p class="text-gray-400 flex-grow">
+       Dive into the latest technology trends, gadgets, and innovations with expert guests.
+      </p>
+      <button aria-label="Listen to Tech Talk podcast" class="mt-4 self-start px-4 py-2 bg-indigo-500 hover:bg-indigo-600 rounded text-white font-semibold transition">
+       Listen Now
+      </button>
+     </div>
+    </article>
+    <article class="bg-gray-800 rounded-lg shadow-lg overflow-hidden hover:shadow-indigo-500 transition cursor-pointer flex flex-col">
+     <img alt="Podcast cover image showing a heart and stethoscope with soft green and white colors for Health Matters podcast" class="w-full h-48 object-cover" height="250" loading="lazy" src="https://storage.googleapis.com/a1aa/image/89e0b70f-d270-4fff-edb7-1aba05708ea8.jpg" width="400"/>
+     <div class="p-5 flex flex-col flex-grow">
+      <h3 class="text-xl font-semibold text-indigo-300 mb-2">
+       Health Matters
+      </h3>
+      <p class="text-gray-400 flex-grow">
+       Explore wellness tips, medical breakthroughs, and mental health advice from professionals.
+      </p>
+      <button aria-label="Listen to Health Matters podcast" class="mt-4 self-start px-4 py-2 bg-indigo-500 hover:bg-indigo-600 rounded text-white font-semibold transition">
+       Listen Now
+      </button>
+     </div>
+    </article>
+    <article class="bg-gray-800 rounded-lg shadow-lg overflow-hidden hover:shadow-indigo-500 transition cursor-pointer flex flex-col">
+     <img alt="Podcast cover image showing an open book with magical sparkles and warm colors for Storytime podcast" class="w-full h-48 object-cover" height="250" loading="lazy" src="https://storage.googleapis.com/a1aa/image/66ef2c67-7e3f-4472-f715-8b02a9151e21.jpg" width="400"/>
+     <div class="p-5 flex flex-col flex-grow">
+      <h3 class="text-xl font-semibold text-indigo-300 mb-2">
+       Storytime
+      </h3>
+      <p class="text-gray-400 flex-grow">
+       Immerse yourself in captivating stories, fairy tales, and original audio dramas.
+      </p>
+      <button aria-label="Listen to Storytime podcast" class="mt-4 self-start px-4 py-2 bg-indigo-500 hover:bg-indigo-600 rounded text-white font-semibold transition">
+       Listen Now
+      </button>
+     </div>
+    </article>
+   </div>
+  </section>
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-gray-400 py-10 mt-auto">
+   <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 sm:grid-cols-3 gap-8">
+    <div>
+     <h4 class="text-indigo-400 font-semibold mb-4">
+      Streamify
+     </h4>
+     <p class="text-sm">
+      A powerful music and podcast streaming platform offering personalized playlists, smart recommendations, and high-quality audio playback.
+     </p>
+    </div>
+    <div>
+     <h4 class="text-indigo-400 font-semibold mb-4">
+      Quick Links
+     </h4>
+     <ul class="space-y-2 text-sm">
+      <li>
+       <a class="hover:text-indigo-300 transition" href="#">
+        Home
+       </a>
+      </li>
+      <li>
+       <a class="hover:text-indigo-300 transition" href="#">
+        Browse
+       </a>
+      </li>
+      <li>
+       <a class="hover:text-indigo-300 transition" href="#">
+        Podcasts
+       </a>
+      </li>
+      <li>
+       <a class="hover:text-indigo-300 transition" href="#">
+        Playlists
+       </a>
+      </li>
+      <li>
+       <a class="hover:text-indigo-300 transition" href="#">
+        Artists
+       </a>
+      </li>
+      <li>
+       <a class="hover:text-indigo-300 transition" href="#">
+        About
+       </a>
+      </li>
+     </ul>
+    </div>
+    <div>
+     <h4 class="text-indigo-400 font-semibold mb-4">
+      Connect With Us
+     </h4>
+     <div class="flex space-x-6 text-lg">
+      <a aria-label="Facebook" class="hover:text-indigo-300 transition" href="#">
+       <i class="fab fa-facebook-square">
+       </i>
+      </a>
+      <a aria-label="Twitter" class="hover:text-indigo-300 transition" href="#">
+       <i class="fab fa-twitter-square">
+       </i>
+      </a>
+      <a aria-label="Instagram" class="hover:text-indigo-300 transition" href="#">
+       <i class="fab fa-instagram-square">
+       </i>
+      </a>
+      <a aria-label="LinkedIn" class="hover:text-indigo-300 transition" href="#">
+       <i class="fab fa-linkedin">
+       </i>
+      </a>
+     </div>
+     <p class="mt-6 text-xs text-gray-500">
+      © 2024 Streamify. All rights reserved.
+     </p>
+    </div>
+   </div>
+  </footer>
+  <script>
+   const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    mobileMenuButton.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
+ </body>
+</html>
